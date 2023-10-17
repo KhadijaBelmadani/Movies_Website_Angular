@@ -1,0 +1,78 @@
+.carousel-inner {
+  height: 700px;
+}
+.carousel-inner .carousel-item img {
+  height: 700px;
+  object-fit: cover;
+}
+.carousel-caption h2 {
+  color: #e50914;
+  font-weight: bold;
+  /* font-size: 20px; */
+}
+.carousel-caption p {
+  color: #ffffff;
+}
+.trend {
+  color: yellow;
+}
+.rowposter {
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+.rowimg {
+  max-height: 100px;
+  object-fit: contain;
+  width: 100%;
+  box-sizing: content-box;
+  transition: transform 450ms;
+  margin-right: 5px;
+}
+.rowimg:hover {
+  transform: scale(1.09);
+  cursor: pointer;
+}
+.largeposter {
+  max-height: 300px;
+}
+.rowposter::-webkit-scrollbar {
+  display: none;
+}
+img{
+  cursor: pointer;
+}
+.footer-area {
+  padding: 40px 0px;
+  background-color: black;
+  color: #fff;
+}
+.footer-area a {
+  text-decoration: none;
+}
+.footer-area .footer-heading {
+  font-size: 24px;
+  color: #fff;
+}
+.footer-area .footer-underline {
+  height: 1px;
+  width: 70px;
+  background-color: #ddd;
+  margin: 10px 0px;
+}
+.copyright-area {
+  padding: 14px 0px;
+  background-color: rgba(210, 210, 0, 0.934);
+}
+.copyright-area p {
+  margin-bottom: 0px;
+  color: black;
+}
+.copyright-area .social-media {
+  text-align: end;
+}
+.copyright-area .social-media a {
+  margin: 0px 10px;
+  color: #fff;
+  width: 20px;
+}

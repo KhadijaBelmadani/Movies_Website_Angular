@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: black;
+  overflow-x: hidden;
+}
+.navbar .navbar-brand {
+  color: rgb(255, 255, 0);
+  font-weight: bolder;
+}
+.navbar-nav .nav-item .nav-link {
+  color: rgb(255, 255, 0);
+}
+.navbar-nav .nav-item .nav-link:hover {
+  font-weight: bold;
+}
+.custom-icon {
+  color: rgb(255, 255, 0);
+}

@@ -1,0 +1,290 @@
+<!-- banner start -->
+<div class="container-fluid">
+  <div
+    id="carouselExampleDark"
+    class="carousel carousel-dark slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-inner">
+      <div
+        class="carousel-item active"
+        data-bs-interval="10000"
+        *ngFor="let b of bannerResult; let i = index"
+        [ngClass]="{ active: i === 1 }"
+      >
+        <img
+          class="y"
+          src="http://image.tmdb.org/t/p/original/{{ b.backdrop_path }}"
+          class="d-block w-100"
+          alt="..."
+          [routerLink]="['/movie', b.id]"
+        />
+        <div class="carousel-caption d-non d-md-block">
+          <h2>{{ b.original_title }}</h2>
+          <p>{{ b.overview }}</p>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleDark"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleDark"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<!-- banner end -->
+
+<div class="contain mt-3 p-3">
+  <div class="row">
+    <h5 class="trend">Trending Movies</h5>
+    <div class="rowposter mt-3 p-2">
+      <ng-container *ngFor="let t of trendingMovieResult">
+        <img
+          src="http://image.tmdb.org/t/p/original/{{ t.poster_path }}"
+          class="rowimg largeposter"
+          alt="..."
+          [routerLink]="['/movie', t.id]"
+        />
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="contain mt-3 p-3">
+  <div class="row">
+    <h5 class="trend">New Movies</h5>
+    <div class="rowposter mt-3 p-2">
+      <ng-container *ngFor="let t of newMovieResult">
+        <img
+          src="http://image.tmdb.org/t/p/original/{{ t.poster_path }}"
+          class="rowimg largeposter"
+          alt="..."
+          [routerLink]="['/movie', t.id]"
+        />
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="contain mt-3 p-3">
+  <div class="row">
+    <h5 class="trend">Popular Movies</h5>
+    <div class="rowposter mt-3 p-2">
+      <ng-container *ngFor="let t of popularMovieResult">
+        <img
+          src="http://image.tmdb.org/t/p/original/{{ t.poster_path }}"
+          class="rowimg largeposter"
+          alt="..."
+          [routerLink]="['/movie', t.id]"
+        />
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="contain mt-3 p-3">
+  <div class="row">
+    <h5 class="trend">Fantasy Movies</h5>
+    <div class="rowposter mt-3 p-2">
+      <ng-container *ngFor="let t of fantasticMovieResult">
+        <img
+          src="http://image.tmdb.org/t/p/original/{{ t.poster_path }}"
+          class="rowimg largeposter"
+          alt="..."
+          [routerLink]="['/movie', t.id]"
+        />
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="contain mt-3 p-3">
+  <div class="row">
+    <h5 class="trend">Action Movies</h5>
+    <div class="rowposter mt-3 p-2">
+      <ng-container *ngFor="let t of actionMovieResult">
+        <img
+          src="http://image.tmdb.org/t/p/original/{{ t.poster_path }}"
+          class="rowimg largeposter"
+          alt="..."
+          [routerLink]="['/movie', t.id]"
+        />
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="contain mt-3 p-3">
+  <div class="row">
+    <h5 class="trend">Adventure Movies</h5>
+    <div class="rowposter mt-3 p-2">
+      <ng-container *ngFor="let t of adventureMovieResult">
+        <img
+          src="http://image.tmdb.org/t/p/original/{{ t.poster_path }}"
+          class="rowimg largeposter"
+          alt="..."
+          [routerLink]="['/movie', t.id]"
+        />
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="contain mt-3 p-3">
+  <div class="row">
+    <h5 class="trend">Animation Movies</h5>
+    <div class="rowposter mt-3 p-2">
+      <ng-container *ngFor="let t of animationMovieResult">
+        <img
+          src="http://image.tmdb.org/t/p/original/{{ t.poster_path }}"
+          class="rowimg largeposter"
+          alt="..."
+          [routerLink]="['/movie', t.id]"
+        />
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="contain mt-3 p-3">
+  <div class="row">
+    <h5 class="trend">Comedy Movies</h5>
+    <div class="rowposter mt-3 p-2">
+      <ng-container *ngFor="let t of comedyMovieResult">
+        <img
+          src="http://image.tmdb.org/t/p/original/{{ t.poster_path }}"
+          class="rowimg largeposter"
+          alt="..."
+          [routerLink]="['/movie', t.id]"
+        />
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="contain mt-3 p-3">
+  <div class="row">
+    <h5 class="trend">Documentary Movies</h5>
+    <div class="rowposter mt-3 p-2">
+      <ng-container *ngFor="let t of documentaryMovieResult">
+        <img
+          src="http://image.tmdb.org/t/p/original/{{ t.poster_path }}"
+          class="rowimg largeposter"
+          alt="..."
+          [routerLink]="['/movie', t.id]"
+        />
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="contain mt-3 p-3">
+  <div class="row">
+    <h5 class="trend">Science fiction Movies</h5>
+    <div class="rowposter mt-3 p-2">
+      <ng-container *ngFor="let t of sciencefictionMovieResult">
+        <img
+          src="http://image.tmdb.org/t/p/original/{{ t.poster_path }}"
+          class="rowimg largeposter"
+          alt="..."
+          [routerLink]="['/movie', t.id]"
+        />
+      </ng-container>
+    </div>
+  </div>
+</div>
+<div class="contain mt-3 p-3">
+  <div class="row mt-4">
+    <h5 class="trend">Thriller Movies</h5>
+    <div class="rowposter mt-3 p-2">
+      <ng-container *ngFor="let t of thrillerMovieResult">
+        <img
+          src="http://image.tmdb.org/t/p/original/{{ t.poster_path }}"
+          class="rowimg largeposter"
+          alt="..."
+          [routerLink]="['/movie', t.id]"
+        />
+      </ng-container>
+    </div>
+  </div>
+</div>
+<hr />
+<div>
+  <div class="footer-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4 class="footer-heading">MovieMuse</h4>
+          <div class="footer-underline"></div>
+          <p>
+            Stay up-to-date with the latest movie releases and trends in the
+            industry. We provide valuable insights, news articles, and
+            interviews with your favorite actors and directors. Dive into the
+            world of cinema and immerse yourself in the magic of storytelling.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="footer-heading">Quick Links</h4>
+          <div class="footer-underline"></div>
+          <div class="mb-2"><a href="" class="text-white">Home</a></div>
+          <div class="mb-2"><a href="" class="text-white">About Us</a></div>
+          <div class="mb-2"><a href="" class="text-white">Contact Us</a></div>
+          <div class="mb-2"><a href="" class="text-white">Blogs</a></div>
+        </div>
+
+        <div class="col-md-4">
+          <h4 class="footer-heading">Reach Us</h4>
+          <div class="footer-underline"></div>
+          <div class="mb-2">
+            <p>
+              <i class="fa-brands fa-linkedin"></i>
+              <a
+                href=" https://www.linkedin.com/in/khadija-belmadani-43abb9200?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BiXeQzqwpTd2dgzo2%2FTMwaA%3D%3D"
+                class="text-white"
+              >
+                Khadija Belmadani</a
+              >
+            </p>
+          </div>
+          <div class="mb-2">
+            <a href="" class="text-white">
+              <i class="fa-brands fa-github"></i> Khadija Belmadani
+            </a>
+          </div>
+          <div class="mb-2">
+            <a href="" class="text-white">
+              <i class="fa fa-phone"></i> +212770335681
+            </a>
+          </div>
+          <div class="mb-2">
+            <a href="" class="text-white">
+              <i class="fa fa-envelope"></i> kbelmadani906@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <p class="">&copy; 2023 - BELMADANI KHADIJA - All rights reserved.</p>
+        </div>
+        <div class="col-md-4">
+          <div class="social-media">
+            Get Connected:
+            <a href=""><i class="fab fa-facebook" style="color: black"></i></a>
+            <a href=""><i class="fab fa-twitter" style="color: black"></i></a>
+            <a href=""><i class="fab fa-instagram" style="color: black"></i></a>
+            <a href=""><i class="fab fa-youtube" style="color: black"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
